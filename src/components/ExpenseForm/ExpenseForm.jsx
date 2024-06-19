@@ -32,20 +32,23 @@ const {currentUser,getData}=useContext(AuthContext)
      axios.post(`${import.meta.env.VITE_BACK_API}/api/expenses/add`,newData).then(()=>{
       
       getData(currentUser.username)
-     
+      setName("")
+      setAmount("")
+      setDate("")
+      setCat("")
     })
-    
+ 
   }
 
   return (
     <div className='expenseform'>
        <form>
-        <input type="text" placeholder='Expense name' onChange={(e)=>setName(e.target.value)}/>
-        <input type="text" placeholder='Amount' onChange={(e)=>setAmount(e.target.value)}/> 
+        <input type="text" value={name} placeholder='Expense name' onChange={(e)=>setName(e.target.value)}/>
+        <input type="text" value={amount} placeholder='Amount' onChange={(e)=>setAmount(e.target.value)}/> 
         <select onChange={(e)=>setCat(e.target.value)}>
             {category.map((item,id)=><option key={id} value={item}>{item}</option>)}
         </select>
-        <input type="date" onChange={(e)=>setDate(e.target.value)}/>
+        <input type="date" value={date} onChange={(e)=>setDate(e.target.value)}/>
         <div className='addbtn' onClick={handleClick}>
         <IoIosAddCircle size={26}   />
         </div>

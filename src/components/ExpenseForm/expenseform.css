@@ -21,7 +21,7 @@
         }
        .addbtn{
         margin-top:2px;
-
+cursor: pointer;
        }
        .addbtn:hover{
         color: rgb(145, 243, 243);
