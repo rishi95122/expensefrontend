@@ -37,7 +37,7 @@ const Navbar = () => {
             </Link>
             <Link to="/register">
               {" "}
-              <button className="singup"> Singup</button>
+              <button className="singup"> Signup</button>
             </Link>
           </div>
         )}
