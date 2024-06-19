@@ -28,7 +28,7 @@ console.log(import.meta.env.VITE_BACK_API)
       }
 
     axios.post(`${import.meta.env.VITE_BACK_API}/api/auth/login`,{
-      email:email,
+      email:email.toLowerCase(),
       password:password
     }).then((data)=>{
       toast.success("Logged In")

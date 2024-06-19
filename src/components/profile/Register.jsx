@@ -25,7 +25,7 @@ const Register = () => {
       return;
 
    const res= axios.post(`${import.meta.env.VITE_BACK_API}/api/auth/register`,{
-    email:email,
+    email:email.toLowerCase(),
     username:username,
     password:password
   }).then(()=>{
