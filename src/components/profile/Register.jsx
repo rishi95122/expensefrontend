@@ -26,7 +26,7 @@ const Register = () => {
 
    const res= axios.post(`${import.meta.env.VITE_BACK_API}/api/auth/register`,{
     email:email.toLowerCase(),
-    username:username,
+    username:username.toLowerCase(),
     password:password
   }).then(()=>{
   setLoader(false)
