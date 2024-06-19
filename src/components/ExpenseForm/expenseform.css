@@ -1,0 +1,30 @@
+.expenseform{
+    color:white
+    ;
+    form{
+        display: flex;
+        flex-direction: row;
+       gap:5px;
+        flex-wrap: wrap;
+       
+        input{
+            background-color: rgb(16, 15, 15);
+            color:white;
+            padding:5px;
+            border: 1px solid rgb(36, 34, 34);
+        }
+        select{
+            background-color: rgb(16, 15, 15);
+            color:white;
+            padding:5px;
+            border: 1px solid rgb(36, 34, 34);
+        }
+       .addbtn{
+        margin-top:2px;
+
+       }
+       .addbtn:hover{
+        color: rgb(145, 243, 243);
+       }
+    }
+}
